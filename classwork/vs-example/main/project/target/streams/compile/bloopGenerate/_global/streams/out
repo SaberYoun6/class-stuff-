@@ -1,0 +1,4 @@
+[debug] [main-build] Classpath dependencies List()
+[debug] [main-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'main-build' to '/home/TragicLightFIreMoonscapes/git/hub/vs-example/main/project/.bloop/main-build.json'
+[success] Generated .bloop/main-build.json
