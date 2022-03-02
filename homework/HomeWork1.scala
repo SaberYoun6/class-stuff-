@@ -22,18 +22,25 @@ object HomeWork1{
     val http = "http://allaboutscala".substring(8,9)
     println(http)
   }
-  def fullNameAndFavoriteMovie(wholeName:String, movie:String) : Unit = 
+  def fullName(movie:String) : Unit = 
   {
+    val sc = new Scanner(System.in)
+    val wholeName= sc.nextLine().stripMargin
     val name : Regex = "[A-Z]*[a-z]".r
     for (patternMatch <- name.findAllMatchIn(wholeName)) 
-      printf("%s%n%s%n",patternMatch.group(1),patternMatch.group(2))
-    println(movie)
+      printf("%s%n%s%n",patternMatch.group(0),patternMatch.group(1))
+      println(movie)
+  sc.close()
+  }
+  def FavoriteMovie(): String ={
+    val sc = new Scanner(System.in)
+    movie = sc.nextLine()
+    sc.close()
   }
   def main(args: Array[String]): Unit = {
     jsonLike()
     
     val sc = new Scanner(System.in)
-    val kyd = new Scanner(System.in)
     println("please enter your first name")
     val  name = sc.nextLine()
     println("please enter your age")
@@ -41,22 +48,17 @@ object HomeWork1{
 
     nameAge(name,age)
     httpIndexer()
-    println("please include enter your surname and family-name ")
-   
-    val surnameAndFamilyname= "Saberina Young"
-
-    var number = 7
     println("What is your favorite Movie!")
-    val title = "Akria"
 
-
+    val title = favoriteMovie()
+    println(title)
+    println("please include enter your given-name and surname ")
+    println("your favorite Movie title has already been include")
     
-    fullNameAndFavoriteMovie(surnameAndFamilyname,title)
+    fullName(title)
 
 
-    kyd.close()
     sc.close()
-
 
   }
 }
